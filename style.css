@@ -1,0 +1,136 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.alert {
+    width: 100%;
+    height: 100%;
+    margin-top: -10px;
+    background-color: rgb(0, 0, 0, 0.8);
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.alert .masseg {
+    width: 60%;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.filter {
+    filter: blur(5px);
+}
+
+.filter-span {
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    color: rgb(14, 13, 13);
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-span:hover {
+    box-shadow: 5px 5px 15px 1px rgb(0 0 0 / 71%);
+}
+
+.docmntion {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #49e986;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name {
+    width: 80%;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}
+
+.error {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.games {
+    max-width: 350px;
+    margin: 45px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    perspective: 600px;
+}
+
+.games.no-clicking {
+    /*class java script*/
+    pointer-events: none;
+}
+
+.box {
+    margin: 3px 3px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.front {
+    background-color: #49e986;
+}
+
+.back {
+    background-color: rgb(36, 169, 140);
+    transform: rotateY(180deg);
+    /* عندما يقوم البوكس بالالتفاف هكذا يكون وضع الباك*/
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    border-radius: 9px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.is-flipped,
+.has-match {
+    transform: rotateY(180deg);
+    /*class java script*/
+    pointer-events: none;
+}
